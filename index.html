@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beryl Traders · Premium Cashews</title>
+<meta name="description" content="Beryl Traders sorts, grades and packs whole cashew kernels for homes, shops and wholesale buyers.">
+<meta name="theme-color" content="#0F3D38">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://ebenitosam.github.io/beryl-traders/">
+<!-- Open Graph / social previews (absolute URLs: update if the site moves to its own domain) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Beryl Traders">
+<meta property="og:title" content="Beryl Traders · Premium Cashews">
+<meta property="og:description" content="Whole, Splits, Pieces and Powder cashews in 1 kg pouches. Message us on WhatsApp for today's price.">
+<meta property="og:url" content="https://ebenitosam.github.io/beryl-traders/">
+<meta property="og:image" content="https://ebenitosam.github.io/beryl-traders/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Beryl Traders: Cashews, graded like gems.">
+<meta property="og:locale" content="en_IN">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ---------- Colours: Beryl Green ---------- */
+:root{
+  --bg:#0F3D38; --surface:#164C46; --ink:#F6ECD9; --muted:#B5CCC3;
+  --accent:#F2B33D; --accent-ink:#1A1205; --pop:#E8553A; --line:rgba(246,236,217,.18);
+  --kernel:#F4E3C1;
+  --display:"Young Serif", Georgia, serif;
+  --body:"Figtree", system-ui, sans-serif;
+  --r-lg:44px; --r-md:22px; --r-sm:12px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;transition:background .5s,color .5s;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2.2rem,4.6vw,3.6rem);max-width:16ch}
+.lede{color:var(--muted);font-size:1.12rem;max-width:56ch}
+.btn{display:inline-flex;align-items:center;gap:.6em;font:700 1rem var(--body);padding:.95em 1.5em;border-radius:999px;border:2px solid var(--accent);background:var(--accent);color:var(--accent-ink);text-decoration:none;cursor:pointer;transition:transform .2s, box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 0 -4px color-mix(in srgb,var(--accent) 45%,transparent)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--ink);box-shadow:none}
+
+/* ---------- Nav ---------- */
+header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);transition:background .5s}
+.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--display);font-size:1.45rem}
+.logo svg{width:36px;height:36px}
+.logo small{display:block;font:600 .7rem var(--body);color:var(--muted);letter-spacing:.04em;margin-top:-4px}
+.nav ul{display:flex;gap:2rem;list-style:none}
+.nav ul a{text-decoration:none;font-weight:600;color:var(--muted)}
+.nav ul a:hover{color:var(--ink)}
+.menu-btn{display:none;background:none;border:2px solid var(--line);color:var(--ink);border-radius:10px;padding:.4rem .7rem;font:700 .9rem var(--body)}
+
+/* ---------- Hero ---------- */
+.hero{padding:72px 0 40px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(3rem,6.6vw,5.6rem);margin:0 0 .3em}
+.hero h1 .line2{display:block;color:var(--accent);padding-left:.6em}
+.hero .lede{margin-bottom:2rem}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+.hero-facts{display:flex;gap:2.4rem;margin-top:3rem;padding-top:1.6rem;border-top:1px solid var(--line);flex-wrap:wrap}
+.hero-facts b{display:block;font-family:var(--display);font-size:clamp(1.4rem,3vw,2rem);font-weight:400;color:var(--ink)}
+.hero-facts span{color:var(--muted);font-size:.92rem}
+.hero-art{position:relative;aspect-ratio:1/1.02}
+.kernel-mask{position:absolute;inset:0;clip-path:url(#cashewClip);background:var(--kernel)}
+.kernel-mask img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);animation:drift 14s ease-in-out infinite alternate}
+.hero-art .shadow{position:absolute;inset:0;clip-path:url(#cashewClip);background:var(--pop);transform:translate(18px,22px);opacity:.9}
+@keyframes drift{to{transform:scale(1.14) translate(-2%,2%)}}
+.sticker{position:absolute;right:2%;top:2%;width:150px;height:150px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;box-shadow:0 8px 0 rgba(0,0,0,.18)}
+.sticker svg{position:absolute;inset:0;width:100%;height:100%;animation:spin 22s linear infinite}
+.sticker text{font:800 12.5px var(--body);letter-spacing:.18em;fill:var(--accent-ink)}
+.sticker strong{font-family:var(--display);font-weight:400;font-size:2.1rem;line-height:1}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ---------- Marquee ---------- */
+.ticker{background:var(--accent);color:var(--accent-ink);overflow:hidden;transform:rotate(-1.4deg);margin:40px -20px;border-block:2px solid var(--ink)}
+.ticker-track{display:flex;gap:3rem;width:max-content;padding:16px 0;animation:slide 32s linear infinite;font-family:var(--display);font-size:1.7rem;white-space:nowrap}
+.ticker-track span{display:inline-flex;align-items:center;gap:3rem}
+.ticker-track svg{width:26px;height:26px;fill:currentColor}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+section{padding:110px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:56px;flex-wrap:wrap}
+
+/* ---------- Grade finder ---------- */
+#grades{background:var(--surface);border-radius:var(--r-lg);margin:0 16px;transition:background .5s}
+.grade-tabs{display:flex;flex-wrap:wrap;gap:.6rem;margin-bottom:36px}
+.grade-tabs button{font:700 1rem var(--body);padding:.7em 1.2em;border-radius:999px;border:2px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;transition:.2s}
+.grade-tabs button:hover{border-color:var(--ink)}
+.grade-tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.grade-panel{display:grid;grid-template-columns:1fr 1.25fr;gap:48px;align-items:center}
+.grade-count{font-family:var(--display);font-size:clamp(5rem,13vw,10rem);line-height:.9;color:var(--accent)}
+.grade-count small{font:600 1rem var(--body);color:var(--muted);display:block;margin-top:1.4rem}
+.grade-panel h3{font-size:2rem;margin:1.4rem 0 .5rem}
+.grade-panel dl{display:grid;grid-template-columns:auto 1fr;gap:.5rem 1.2rem;margin-top:1.4rem}
+.grade-panel dt{color:var(--muted);font-weight:600}
+.grade-panel dd{font-weight:600}
+.kernel-field{background:var(--bg);border-radius:var(--r-md);padding:28px;min-height:360px;display:flex;flex-wrap:wrap;align-content:center;justify-content:center;gap:10px 8px;transition:background .5s}
+.kernel-field svg{fill:var(--kernel);animation:pop .45s cubic-bezier(.3,1.6,.5,1) backwards}
+@keyframes pop{from{transform:scale(0) rotate(-40deg);opacity:0}}
+.kernel-note{color:var(--muted);font-size:.9rem;margin-top:.8rem;text-align:center}
+
+/* ---------- Journey (a real sequence, so it is numbered) ---------- */
+.journey{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.step{position:relative}
+.step figure{border-radius:200px 200px var(--r-md) var(--r-md);overflow:hidden;aspect-ratio:3/4;background:var(--surface)}
+.step img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.step:hover img{transform:scale(1.07)}
+.step .num{position:absolute;top:12px;left:50%;translate:-50% 0;width:44px;height:44px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-family:var(--display);font-size:1.2rem}
+.step h3{font-size:1.45rem;margin:1rem 0 .3rem}
+.step p{color:var(--muted);font-size:.95rem}
+
+/* ---------- Products ---------- */
+.products{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+.prod{position:relative;border-radius:var(--r-md);overflow:hidden;min-height:340px;display:flex;align-items:flex-end;color:#FFF7EA;isolation:isolate}
+.prod img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .7s}
+.prod:hover img{transform:scale(1.06)}
+.prod::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,transparent 35%,rgba(20,10,4,.82))}
+.prod .body{padding:28px}
+.prod h3{font-size:2rem}
+.prod p{opacity:.88;max-width:40ch;margin:.3rem 0 1rem}
+.packs{display:flex;gap:.4rem;flex-wrap:wrap}
+.packs span{font-weight:700;font-size:.82rem;padding:.3em .8em;border-radius:999px;background:rgba(255,247,234,.18);backdrop-filter:blur(6px)}
+.tag{position:absolute;top:20px;left:20px;background:var(--pop);color:#fff;font-weight:800;font-size:.85rem;padding:.4em .9em;border-radius:999px}
+.p1{grid-column:span 7;min-height:460px}.p2{grid-column:span 5;min-height:460px}
+.p3{grid-column:span 6}.p4{grid-column:span 6}
+.powder{background:var(--pop);color:#fff}
+.powder::after{display:none}
+.powder .dust{position:absolute;left:0;right:0;top:4%;width:100%;height:46%;z-index:-1}
+.powder .dust circle{fill:#FFF3DC}
+
+/* ---------- Why us ---------- */
+.why{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.why-photo{position:relative}
+.why-photo img{border-radius:var(--r-lg) var(--r-lg) var(--r-lg) 0;aspect-ratio:4/3;object-fit:cover;width:100%}
+.why-photo .badge{position:absolute;left:-14px;bottom:-24px;background:var(--accent);color:var(--accent-ink);padding:18px 22px;border-radius:18px;font-weight:700;max-width:230px;box-shadow:0 8px 0 rgba(0,0,0,.15)}
+.why-list{list-style:none;margin-top:2rem}
+.why-list li{display:grid;grid-template-columns:52px 1fr;gap:1rem;padding:1.3rem 0;border-top:1px solid var(--line)}
+.why-list li:last-child{border-bottom:1px solid var(--line)}
+.why-list .ico{width:52px;height:52px;border-radius:16px;background:var(--surface);display:grid;place-items:center}
+.why-list .ico svg{width:26px;height:26px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.why-list h3{font-family:var(--body);font-weight:700;font-size:1.12rem;line-height:1.3}
+.why-list p{color:var(--muted);font-size:.96rem}
+
+/* ---------- Wholesale band ---------- */
+.band{background:var(--pop);color:#fff;border-radius:var(--r-lg);margin:0 16px;padding:80px 0;position:relative;overflow:hidden}
+.band .wrap{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.band h2{max-width:14ch}
+.band p{opacity:.9;max-width:48ch;margin:1rem 0 1.8rem}
+.band .btn{background:#fff;color:#1b0d06;border-color:#fff}
+.band-list{list-style:none;display:grid;gap:.8rem}
+.band-list li{background:rgba(255,255,255,.14);border-radius:14px;padding:1rem 1.2rem;font-weight:700;display:flex;justify-content:space-between;gap:1rem}
+.band-list li span{font-weight:500;opacity:.85}
+.band .ghost-nut{position:absolute;right:-60px;bottom:-80px;width:320px;opacity:.12;fill:#fff;transform:rotate(-20deg)}
+
+/* ---------- Order form ---------- */
+.order{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:start}
+.contact-lines{list-style:none;margin-top:2rem;display:grid;gap:1rem}
+.contact-lines li{display:flex;gap:.9rem;align-items:center;font-weight:600}
+.contact-lines svg{width:22px;height:22px;stroke:var(--accent);fill:none;stroke-width:2;flex:none}
+form{background:var(--surface);border-radius:var(--r-lg);padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:18px;transition:background .5s}
+form .full{grid-column:1/-1}
+label{display:grid;gap:.4rem;font-weight:700;font-size:.92rem}
+input,select,textarea{font:500 1rem var(--body);padding:.85em 1em;border-radius:var(--r-sm);border:2px solid var(--line);background:var(--bg);color:var(--ink);transition:border-color .2s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent)}
+textarea{resize:vertical;min-height:96px}
+.form-msg{grid-column:1/-1;font-weight:600;color:var(--accent);min-height:1.4em}
+
+footer{border-top:1px solid var(--line);padding:56px 0 40px;margin-top:40px}
+.foot{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.foot p,.credits{color:var(--muted);font-size:.88rem}
+.credits{margin-top:2rem}
+.credits a{color:var(--muted)}
+
+/* ---------- Responsive ---------- */
+@media (max-width:980px){
+  .hero-grid,.grade-panel,.why,.order,.band .wrap{grid-template-columns:1fr}
+  .hero-art{max-width:520px;margin:0 auto;width:100%}
+  .journey{grid-template-columns:repeat(5,72%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px}
+  .step{scroll-snap-align:start}
+  .p1,.p2,.p3,.p4{grid-column:span 12}
+  .p1,.p2{min-height:380px}
+}
+@media (max-width:760px){
+  .nav ul{display:none;position:absolute;top:74px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:.5rem 24px 1rem}
+  .nav ul.open{display:flex}
+  .nav ul a{display:block;padding:.8rem 0}
+  .menu-btn{display:block}
+  .nav .btn{display:none}
+  section{padding:80px 0}
+  form{grid-template-columns:1fr;padding:26px}
+  .sticker{width:112px;height:112px}
+  .sticker strong{font-size:1.6rem}
+  .sticker text{font-size:11px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<!-- Shared shapes -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <clipPath id="cashewClip" clipPathUnits="objectBoundingBox">
+      <path d="M.76 .08 C.42 -.02 .05 .14 .04 .50 C.03 .85 .36 1.0 .68 .95 C.90 .91 1.0 .78 .93 .67 C.87 .59 .77 .63 .68 .62 C.57 .61 .52 .55 .53 .47 C.54 .38 .62 .34 .74 .33 C.90 .32 .99 .24 .93 .14 C.89 .10 .82 .09 .76 .08 Z"/>
+    </clipPath>
+    <symbol id="nut" viewBox="0 0 100 100">
+      <path d="M 76 8  C 42 -2 5 14 4 50  C 3 85 36 100 68 95  C 90 91 100 78 93 67  C 87 59 77 63 68 62  C 57 61 52 55 53 47  C 54 38 62 34 74 33  C 90 32 99 24 93 14  C 89 10 82 9 76 8  Z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header>
+  <nav class="wrap nav" aria-label="Main">
+    <a href="#top" class="logo" aria-label="Beryl Traders home">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48" fill="var(--accent)"/><use href="#nut" x="20" y="20" width="60" height="60" fill="var(--accent-ink)"/></svg>
+      <span>Beryl Traders<small>Cashew kernels</small></span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="navlinks">Menu</button>
+    <ul id="navlinks">
+      <li><a href="#grades">Cuts</a></li>
+      <li><a href="#journey">Our process</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#wholesale">Wholesale</a></li>
+    </ul>
+    <a class="btn" href="#order">Order now</a>
+  </nav>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <section class="hero" style="padding-bottom:20px">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Cashews,<span class="line2">graded like gems.</span></h1>
+        <p class="lede">Beryl Traders sorts every kernel by size, colour and wholeness, then packs it fresh for your kitchen, your shop or your factory floor.</p>
+        <div class="hero-ctas">
+          <a class="btn" href="#order">Get today's price</a>
+          <a class="btn ghost" href="#grades">Compare the cuts</a>
+        </div>
+        <div class="hero-facts">
+          <div><b>4</b><span>cuts of cashew</span></div>
+          <div><b>1 kg</b><span>sealed pouches</span></div>
+          <div><b>Retail &amp; bulk</b><span>one price list</span></div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="shadow" aria-hidden="true"></div>
+        <div class="kernel-mask"><img src="img/raw.jpg" alt="A heap of whole cashew kernels" fetchpriority="high"></div>
+        <div class="sticker" aria-hidden="true">
+          <svg viewBox="0 0 150 150"><defs><path id="circ" d="M75 75 m-58 0 a58 58 0 1 1 116 0 a58 58 0 1 1 -116 0"/></defs>
+            <text><textPath href="#circ">FRESH PACKED • HAND SORTED • </textPath></text></svg>
+          <strong>Whole</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track" id="ticker"></div>
+  </div>
+
+  <!-- Grade finder -->
+  <section id="grades">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Four cuts. One kernel.</h2>
+        <p class="lede">Whole, split, broken or ground. Pick the cut that suits your recipe and your budget.</p>
+      </div>
+      <div class="grade-tabs" role="tablist" aria-label="Cashew cuts" id="gradeTabs"></div>
+      <div class="grade-panel" role="tabpanel" id="gradePanel" aria-live="polite">
+        <div>
+          <div class="grade-count"><span id="gCount">1</span><small id="gCountLabel">a whole kernel</small></div>
+          <h3 id="gName">Whole cashews</h3>
+          <p class="lede" id="gDesc"></p>
+          <dl>
+            <dt>Best for</dt><dd id="gUse"></dd>
+            <dt>Pack</dt><dd id="gPacks"></dd>
+          </dl>
+        </div>
+        <div>
+          <div class="kernel-field" id="field" aria-hidden="true"></div>
+          <p class="kernel-note">A handful of each cut, drawn to scale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Journey -->
+  <section id="journey">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>From the cashew apple to your pouch</h2>
+        <p class="lede">A cashew grows outside its fruit, one nut hanging below each cashew apple. Here's what happens before it reaches you.</p>
+      </div>
+      <div class="journey">
+        <article class="step"><figure><img src="img/tree.jpg" alt="Cashew flowers with a young green nut" loading="lazy"></figure><span class="num">1</span><h3>Bloom</h3><p>Trees flower in the dry season and set one nut under every apple.</p></article>
+        <article class="step"><figure><img src="img/apple-hand.jpg" alt="A ripe cashew apple held in a hand, nut on top" loading="lazy"></figure><span class="num">2</span><h3>Harvest</h3><p>Ripe apples drop. The nuts are twisted off and sun dried.</p></article>
+        <article class="step"><figure><img src="img/raw.jpg" alt="Raw, unsalted cashew kernels" loading="lazy"></figure><span class="num">3</span><h3>Shell &amp; peel</h3><p>Steamed, cracked open and peeled to free the ivory kernel.</p></article>
+        <article class="step"><figure><img src="img/white.jpg" alt="Whole cashew kernels on a white table" loading="lazy"></figure><span class="num">4</span><h3>Grade</h3><p>Sorted by hand into whole, splits and pieces.</p></article>
+        <article class="step"><figure><img src="img/ring.jpg" alt="A neat pile of cashews on white" loading="lazy"></figure><span class="num">5</span><h3>Grind &amp; pack</h3><p>Some kernels are ground into powder, then everything is sealed in 1 kg pouches.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="products" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Four cuts, one quality</h2>
+        <a class="btn ghost" href="#order">Ask for the price list</a>
+      </div>
+      <div class="products">
+        <article class="prod p1"><img src="img/white.jpg" alt="" loading="lazy"><span class="tag">Most ordered</span>
+          <div class="body"><h3>Whole</h3><p>Unbroken kernels for snacking, sweets, gifting and dry-fruit trays.</p>
+          <div class="packs"><span>1 kg pouch</span></div></div></article>
+        <article class="prod p2"><img src="img/ring.jpg" alt="" loading="lazy">
+          <div class="body"><h3>Splits</h3><p>Kernels split cleanly in two. Made for sweets and bakery toppings.</p>
+          <div class="packs"><span>1 kg pouch</span></div></div></article>
+        <article class="prod p3"><img src="img/raw.jpg" alt="" loading="lazy" style="object-position:70% 50%">
+          <div class="body"><h3>Pieces</h3><p>Broken kernels at a lower price. Same taste in gravies, cookies and granola.</p>
+          <div class="packs"><span>1 kg pouch</span></div></div></article>
+        <article class="prod p4 powder"><svg class="dust" viewBox="0 0 400 220" aria-hidden="true"><g id="dustDots"></g></svg>
+          <div class="body"><h3>Powder</h3><p>Finely ground cashew for rich gravies, kheer, sweets and baking.</p>
+          <div class="packs"><span>1 kg pouch</span></div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why us -->
+  <section style="padding-top:20px">
+    <div class="wrap why">
+      <div class="why-photo">
+        <img src="img/apple-red.jpg" alt="A red cashew apple hanging on the tree" loading="lazy">
+        <div class="badge">Every batch tasted before it's packed.</div>
+      </div>
+      <div>
+        <h2>Why kitchens keep coming back</h2>
+        <ul class="why-list">
+          <li><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 6h18M6 12h12M10 18h4"/></svg></div><div><h3>Sorted by hand, then sorted again</h3><p>Broken and off-colour kernels go to the pieces bin, not into your whole kernels.</p></div></li>
+          <li><div class="ico"><svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="13" rx="2"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg></div><div><h3>Sealed fresh</h3><p>Packed close to dispatch so cashews stay crisp and sweet.</p></div></li>
+          <li><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></div><div><h3>One pouch, fair price</h3><p>Every product comes in the same 1 kg pouch, so prices are simple to compare and reorder.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wholesale -->
+  <section class="band" id="wholesale">
+    <svg class="ghost-nut" viewBox="0 0 100 100" aria-hidden="true"><use href="#nut"/></svg>
+    <div class="wrap">
+      <div>
+        <h2>Buying for a shop, bakery or hotel?</h2>
+        <p>Tell us the cut and how many 1 kg pouches you use in a month. We'll send a sample and a bulk price you can plan around.</p>
+        <a class="btn" href="#order">Request a bulk quote</a>
+      </div>
+      <ul class="band-list">
+        <li>Sweet shops <span>splits, powder</span></li>
+        <li>Bakeries <span>pieces, powder</span></li>
+        <li>Hotels &amp; caterers <span>whole, powder</span></li>
+        <li>Retail shelves <span>whole, 1 kg pouches</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Order -->
+  <section id="order">
+    <div class="wrap order">
+      <div>
+        <h2>Tell us what you need</h2>
+        <p class="lede" style="margin-top:1rem">Fill this in and it opens WhatsApp with your order typed out. We reply with today's price.</p>
+        <ul class="contact-lines">
+          <li><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><span id="phoneText">+91 83003 81322</span></li>
+          <li><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg><span>beryltraders@gmail.com</span></li>
+          <li><svg viewBox="0 0 24 24"><path d="M12 22s8-6 8-13a8 8 0 0 0-16 0c0 7 8 13 8 13z"/><circle cx="12" cy="9" r="3"/></svg><span>CSI Church Street, Thengamputhoor</span></li>
+        </ul>
+      </div>
+      <form id="orderForm" novalidate>
+        <label>Your name<input name="name" required autocomplete="name"></label>
+        <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+        <label>Product<select name="grade" id="gradeSelect"></select></label>
+        <label>Pouches (1 kg each)<input name="qty" type="number" min="1" value="1" inputmode="numeric"></label>
+        <label class="full">Anything else?<textarea name="note" placeholder="Delivery town, gift boxes, monthly order…"></textarea></label>
+        <div class="full"><button class="btn" type="submit">Send order on WhatsApp</button></div>
+        <p class="form-msg" id="formMsg" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a href="#top" class="logo"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48" fill="var(--accent)"/><use href="#nut" x="20" y="20" width="60" height="60" fill="var(--accent-ink)"/></svg><span>Beryl Traders</span></a>
+      <p>© <span id="yr"></span> Beryl Traders. Cashew kernels, graded and packed with care.</p>
+    </div>
+    <p class="credits">Photos from Unsplash (free under the Unsplash License):
+      <a href="https://unsplash.com/photos/IBfLmnU-Pvo">Mo Farhan Badar</a>,
+      <a href="https://unsplash.com/photos/L4gUt0HQ9sc">Rafael Alves</a>,
+      <a href="https://unsplash.com/photos/O2GgNMUlqHU">Amit Kumar Jain</a>,
+      <a href="https://unsplash.com/photos/dQZtRyfKM_Q">Vasanth Kedige</a>,
+      <a href="https://unsplash.com/photos/6xryNdSGfvQ">Anton Shuvalov</a>.</p>
+  </div>
+</footer>
+
+<script>
+/* ===== Edit these for your business ===== */
+const WHATSAPP_NUMBER = "918300381322";   // country code + number, digits only
+const PHONE_DISPLAY  = "+91 83003 81322";
+
+
+const GRADES = [
+  {id:"Whole",  big:"1",    label:"a whole kernel",         name:"Whole cashews", desc:"Unbroken, evenly coloured kernels, sorted by hand.", use:"Snacking, sweets, gifting, dry-fruit trays", packs:"1 kg pouch", n:16, size:58},
+  {id:"Splits", big:"½",    label:"a kernel, split in two", name:"Cashew splits", desc:"Kernels split cleanly in two along their natural line.", use:"Sweet shops, bakery toppings, halwa", packs:"1 kg pouch", n:26, size:48},
+  {id:"Pieces", big:"¼",    label:"of a kernel, roughly",   name:"Cashew pieces", desc:"Broken kernels. Same taste, lower price.", use:"Gravies, cookies, granola, biryani", packs:"1 kg pouch", n:44, size:26},
+  {id:"Powder", big:"fine", label:"ground cashew",          name:"Cashew powder", desc:"Kernels ground to a soft, creamy meal.", use:"Rich gravies, kheer, sweets, baking", packs:"1 kg pouch", n:320, size:7},
+];
+
+/* A mound of powder drawn as dots */
+function heap(count,x0,w,floor,height,maxR){let h="";for(let i=0;i<count;i++){const x=Math.random();const top=floor-Math.pow(Math.sin(x*Math.PI),1.4)*height;const y=top+Math.pow(Math.random(),.7)*(floor-top);
+h+=`<circle cx="${(x0+x*w).toFixed(1)}" cy="${y.toFixed(1)}" r="${(.8+Math.random()*maxR).toFixed(1)}" opacity="${(.4+Math.random()*.6).toFixed(2)}"/>`}return h}
+
+/* Ticker */
+const words=["Whole cashews","Splits","Pieces","Cashew powder","1 kg pouches","Bulk orders"];
+const nut='<svg viewBox="0 0 100 100"><use href="#nut"/></svg>';
+const half=words.map(w=>`<span>${w}${nut}</span>`).join("");
+document.getElementById("ticker").innerHTML=half+half;
+
+/* Grade finder */
+const tabs=document.getElementById("gradeTabs"), field=document.getElementById("field");
+function showGrade(g){
+  tabs.querySelectorAll("button").forEach(b=>b.setAttribute("aria-selected", b.dataset.id===g.id));
+  document.getElementById("gCount").textContent = g.big;
+  document.getElementById("gCountLabel").textContent = g.label;
+  document.getElementById("gName").textContent = g.name;
+  document.getElementById("gDesc").textContent = g.desc;
+  document.getElementById("gUse").textContent = g.use;
+  document.getElementById("gPacks").textContent = g.packs;
+  // draw the tray: one kernel per ten in a pound; bigger grade = bigger kernel
+  const n = g.n, size = g.size;
+  field.innerHTML="";
+  if(g.id==="Powder"){ field.innerHTML=`<svg viewBox="0 0 400 240" width="100%" style="max-width:520px;animation:none"><g fill="var(--kernel)">${heap(1400,20,360,225,190,2.4)}</g></svg>`; return; }
+  for(let i=0;i<n;i++){
+    const s=document.createElementNS("http://www.w3.org/2000/svg","svg");
+    s.setAttribute("viewBox","0 0 100 100"); s.setAttribute("width",size); s.setAttribute("height",size);
+    const rot = ((i*37)%70) - 35 + (i%2 ? 180 : 0);
+    s.style.transform=`rotate(${rot}deg)`; s.style.animationDelay=(g.id==="Powder" ? i*2 : i*14)+"ms";
+    let inner='<use href="#nut"/>';
+    if(g.id==="Splits") inner='<path d="M 76 8  C 42 -2 5 14 4 50  C 3 85 36 100 68 95  C 90 91 100 78 93 67  C 87 59 77 63 68 62  C 57 61 52 55 53 47  C 54 38 62 34 74 33  C 90 32 99 24 93 14  C 89 10 82 9 76 8  Z" opacity=".95"/><rect x="0" y="48" width="100" height="60" fill="var(--bg)"/>';
+    if(g.id==="Pieces") inner=`<path d="M${20+i%3*5} 30 L70 ${20+i%4*6} L${60+i%2*10} 70 L30 75 Z"/>`;
+    if(g.id==="Powder") inner='<circle cx="50" cy="50" r="'+(30+(i*13)%20)+'"/>';
+    s.innerHTML=inner; field.appendChild(s);
+  }
+}
+GRADES.forEach(g=>{
+  const b=document.createElement("button");
+  b.setAttribute("role","tab"); b.dataset.id=g.id; b.textContent=g.id;
+  b.addEventListener("click",()=>{showGrade(g); document.getElementById("gradeSelect").value=g.name;});
+  tabs.appendChild(b);
+  const o=document.createElement("option"); o.value=g.name; o.textContent=g.name;
+  document.getElementById("gradeSelect").appendChild(o);
+});
+showGrade(GRADES[0]);
+
+/* Mobile menu */
+const mb=document.querySelector(".menu-btn"), links=document.getElementById("navlinks");
+mb.addEventListener("click",()=>{const o=links.classList.toggle("open"); mb.setAttribute("aria-expanded",o)});
+links.addEventListener("click",e=>{if(e.target.tagName==="A"){links.classList.remove("open");mb.setAttribute("aria-expanded",false)}});
+
+/* Order form → WhatsApp */
+document.getElementById("phoneText").textContent = PHONE_DISPLAY;
+document.getElementById("orderForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const f=new FormData(e.target), msg=document.getElementById("formMsg");
+  if(!f.get("name").trim() || !f.get("phone").trim()){ msg.textContent="Add your name and phone number so we can reply."; return; }
+  const text=`Hello Beryl Traders, I'd like to order.\nName: ${f.get("name")}\nPhone: ${f.get("phone")}\nProduct: ${f.get("grade")}\nQuantity: ${f.get("qty")} × 1 kg pouch\nNote: ${f.get("note")||"-"}`;
+  const url=`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+  const a=document.createElement("a"); a.href=url; a.target="_blank"; a.rel="noopener"; a.textContent="Open WhatsApp with your order";
+  msg.textContent="Your order is ready. "; msg.appendChild(a);
+  a.click();
+});
+/* Powder card: a heap of dust */
+document.getElementById("dustDots").innerHTML=heap(520,40,360,210,150,2.6);
+document.getElementById("yr").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
