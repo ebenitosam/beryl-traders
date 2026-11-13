@@ -44,7 +44,7 @@ Header nav → Hero → Ticker → Cuts picker (`#grades`) → Process, 5 number
 ## Known gaps / good next tasks
 - **Photos:** there's no real photo for Powder (the card uses a drawn dust heap), and the Splits and Pieces cards show whole kernels. Swap in the owner's own product photos when available.
 - Order form doesn't submit anywhere: it builds a WhatsApp message and opens `wa.me`. That's intentional for a static site.
-- Deployment: GitHub Pages via Actions on push to `main`, expected URL https://ebenitosam.github.io/beryl-traders/. The canonical, `og:url` and `og:image` tags use that absolute URL; change them if the repo name or domain changes.
+- Deployment: main site is Vercel, https://beryl-traders.vercel.app (project `beryl-traders`, team Benito Sam, connected to GitHub repo ebenitosam/beryl-traders, so a push to `main` redeploys). `.vercelignore` keeps CLAUDE.md, .github and .env* out. GitHub Pages (https://ebenitosam.github.io/beryl-traders/) also still deploys from `.github/workflows/pages.yml` as a mirror. The canonical, `og:url` and `og:image` tags use the absolute Vercel URL; change them if a custom domain is added.
 - Could add: Google Maps embed for the shop, a Tamil-language version.
 
 ## Working rules
